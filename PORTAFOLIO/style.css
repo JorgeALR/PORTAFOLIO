@@ -500,6 +500,188 @@ footer {
   border-radius: 11px;
 }
 
+.creative-tools,
+.audience-insights {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f5f6ff;
+  border-radius: 11px;
+}
+
+.creative-tools-heading {
+  max-width: 48rem;
+  margin-bottom: 1rem;
+}
+
+.creative-tools-heading h3,
+.audience-insights h3 {
+  margin: 0.35rem 0;
+  color: var(--primary-color);
+}
+
+.creative-tools-heading > p:last-child,
+.insights-privacy,
+.insights-footnote {
+  line-height: var(--line-height);
+}
+
+/* Controles y lienzo en columnas: el diseño final se procesa dentro del navegador. */
+.creative-layout {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.75fr) minmax(0, 1.25fr);
+  align-items: start;
+  gap: 1.25rem;
+}
+
+.creative-form,
+.insights-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.creative-form {
+  align-content: start;
+}
+
+.creative-form label,
+.insights-field label {
+  margin-top: 0.55rem;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.creative-form input,
+.creative-form select,
+.creative-form textarea,
+.insights-field input,
+.insights-field select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem;
+  border: 1px solid #a8abc5;
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+}
+
+.creative-form textarea {
+  resize: vertical;
+}
+
+.creative-form input:focus-visible,
+.creative-form select:focus-visible,
+.creative-form textarea:focus-visible,
+.insights-field input:focus-visible,
+.insights-field select:focus-visible,
+.creative-download:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.creative-download {
+  min-height: 2.9rem;
+  margin-top: 0.9rem;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  font: inherit;
+  font-weight: var(--bold-font);
+  cursor: pointer;
+}
+
+.creative-download:hover {
+  background: #3543bd;
+}
+
+.creative-preview {
+  display: flex;
+  min-height: 20rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #e6e7f0;
+}
+
+.creative-preview canvas {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 42rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+.creative-status,
+.insights-status {
+  min-height: 1.5em;
+  margin-top: 0.5rem;
+  color: #254f34;
+  line-height: 1.5;
+}
+
+/* Campos agregados: permiten comparar varias audiencias comerciales sin crear perfiles personales. */
+.insights-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+}
+
+.insights-field select {
+  grid-row: span 1;
+}
+
+.insights-submit {
+  align-self: end;
+}
+
+.insights-privacy {
+  margin-top: 0.75rem;
+  color: #39405c;
+}
+
+.insights-results {
+  max-width: 100%;
+  margin-top: 0.75rem;
+  overflow-x: auto;
+  background: #fff;
+}
+
+.insights-table {
+  width: 100%;
+  min-width: 58rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.insights-table caption {
+  padding: 0.75rem;
+  font-weight: var(--bold-font);
+  text-align: left;
+}
+
+.insights-table th,
+.insights-table td {
+  padding: 0.65rem;
+  border: 1px solid #d9dbea;
+  white-space: nowrap;
+}
+
+.insights-table th {
+  background: #f5f6ff;
+  color: var(--primary-color);
+}
+
+.insights-footnote {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
 .advertising-offer h3 {
   margin: 0.35rem 0;
 }
@@ -728,6 +910,14 @@ footer {
   .advertising-budget {
     grid-template-columns: 1fr;
   }
+
+  .creative-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* En móviles, cada bloque ocupa una columna y la llamada a la acción queda cómoda al tacto. */
@@ -739,6 +929,20 @@ footer {
   .advertising-offer {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .creative-tools,
+  .audience-insights {
+    padding: 1rem;
+  }
+
+  .insights-form {
+    grid-template-columns: 1fr;
+  }
+
+  .creative-preview {
+    min-height: 15rem;
+    padding: 0.5rem;
   }
 }
 

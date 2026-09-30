@@ -358,6 +358,10 @@
         </div>
         <form class="insights-form" id="insights-form">
           <div class="insights-field">
+            <label for="insights-date">Fecha del reporte</label>
+            <input id="insights-date" name="date" type="date" required />
+          </div>
+          <div class="insights-field">
             <label for="insights-audience">Público de la campaña</label>
             <select id="insights-audience" name="audience">
               <option value="Negocios locales">Negocios locales</option>
@@ -372,6 +376,10 @@
             <input id="insights-reach" name="reach" type="number" min="0" step="1" required />
           </div>
           <div class="insights-field">
+            <label for="insights-impressions">Impresiones</label>
+            <input id="insights-impressions" name="impressions" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
             <label for="insights-clicks">Clics en el enlace</label>
             <input id="insights-clicks" name="clicks" type="number" min="0" step="1" required />
           </div>
@@ -384,7 +392,7 @@
             <input id="insights-orders" name="orders" type="number" min="0" step="1" required />
           </div>
           <div class="insights-field">
-            <label for="insights-spend">Gasto de esta audiencia (opcional)</label>
+            <label for="insights-spend">Gasto registrado (moneda de la plataforma, opcional)</label>
             <input id="insights-spend" name="spend" type="number" min="0" step="0.01" />
           </div>
           <button class="creative-download insights-submit" type="submit">Añadir resultados agregados</button>
