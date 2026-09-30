@@ -33,7 +33,7 @@
     <!-- Navbar -->
     <nav>
       <h1>Jorge Adan Leon Romero</h1>
-      <ul class="navigation">
+      <ul class="navigation" id="main-navigation">
         <li><a href="#about" class="nav-link">Sobre mi</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Proyectos</a></li>
@@ -41,7 +41,7 @@
         <li><a href="#creative-tools" class="nav-link">Herramientas</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
-      <button class="burger-menu" id="burger-menu">
+      <button class="burger-menu" id="burger-menu" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="main-navigation">
         <ion-icon class="bars" name="menu-outline"></ion-icon>
         <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
       </button>
@@ -397,6 +397,7 @@
           </div>
           <button class="creative-download insights-submit" type="submit">Añadir resultados agregados</button>
         </form>
+        <button class="insights-clear" id="insights-clear" type="button">Borrar los resultados de esta sesión</button>
         <p class="insights-privacy">
           Registra únicamente grupos y cifras globales. No ingreses nombres, correos,
           teléfonos, edades individuales, categorías sensibles ni datos de clientes.

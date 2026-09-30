@@ -15,6 +15,29 @@
     story: [1080, 1920],
   };
 
+  // Mantiene disponible la navegación añadida a la campaña en pantallas pequeñas.
+  const menuButton = document.getElementById("burger-menu");
+  const navigation = document.getElementById("main-navigation");
+
+  function closeNavigation() {
+    if (!menuButton || !navigation) return;
+    navigation.classList.remove("show");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Abrir navegación");
+  }
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("show");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Cerrar navegación" : "Abrir navegación");
+    });
+    navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNavigation));
+    menuButton.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeNavigation();
+    });
+  }
+
   // Dibuja cajas redondeadas con trazados compatibles con navegadores sin roundRect.
   function roundedBox(context, x, y, width, height, radius) {
     const corner = Math.min(radius, width / 2, height / 2);
@@ -33,7 +56,23 @@
 
   // Ajusta el texto al ancho disponible para que la creatividad no corte palabras.
   function drawWrappedText(context, text, x, y, maxWidth, lineHeight, maxLines) {
-    const words = text.trim().split(/\s+/).filter(Boolean);
+    const words = [];
+    text.trim().split(/\s+/).filter(Boolean).forEach((word) => {
+      if (context.measureText(word).width <= maxWidth) {
+        words.push(word);
+        return;
+      }
+      let fragment = "";
+      [...word].forEach((character) => {
+        if (fragment && context.measureText(`${fragment}${character}`).width > maxWidth) {
+          words.push(fragment);
+          fragment = character;
+        } else {
+          fragment += character;
+        }
+      });
+      if (fragment) words.push(fragment);
+    });
     const lines = [];
     let line = "";
 
@@ -165,7 +204,18 @@
   const insightsForm = document.getElementById("insights-form");
   const insightsResults = document.getElementById("insights-results");
   const insightsStatus = document.getElementById("insights-status");
+  const insightsDate = document.getElementById("insights-date");
+  const clearInsightsButton = document.getElementById("insights-clear");
   const audienceRecords = [];
+
+  function todayAsLocalDate() {
+    const today = new Date();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    return `${today.getFullYear()}-${month}-${day}`;
+  }
+
+  if (insightsDate) insightsDate.value = todayAsLocalDate();
 
   function appendCell(row, value, header = false) {
     const cell = document.createElement(header ? "th" : "td");
@@ -235,8 +285,14 @@
         spend: fields.get("spend") === "" ? null : Number(fields.get("spend")),
       };
 
-      if (record.impressions < record.reach) {
-        insightsStatus.textContent = "Las impresiones no pueden ser menores que las personas alcanzadas.";
+      const counts = [record.reach, record.impressions, record.clicks, record.leads, record.orders];
+      if (counts.some((count) => !Number.isSafeInteger(count) || count < 0)
+        || (record.spend !== null && (!Number.isFinite(record.spend) || record.spend < 0))) {
+        insightsStatus.textContent = "Introduce cantidades enteras no negativas y un gasto válido.";
+        return;
+      }
+      if (record.impressions < record.reach || (record.clicks > 0 && record.impressions === 0)) {
+        insightsStatus.textContent = "Revisa las cifras: las impresiones deben cubrir el alcance y no puede haber clics sin impresiones.";
         return;
       }
       if (record.leads > record.clicks || record.orders > record.leads) {
@@ -248,6 +304,15 @@
       renderAudienceRecords();
       insightsStatus.textContent = `Resumen agregado de ${record.audience} añadido solo a esta sesión. Compara varios periodos antes de cambiar la segmentación.`;
       insightsForm.reset();
+      if (insightsDate) insightsDate.value = todayAsLocalDate();
+    });
+  }
+
+  if (clearInsightsButton) {
+    clearInsightsButton.addEventListener("click", () => {
+      audienceRecords.length = 0;
+      renderAudienceRecords();
+      if (insightsStatus) insightsStatus.textContent = "Se borraron los resultados de esta sesión.";
     });
   }
 })();

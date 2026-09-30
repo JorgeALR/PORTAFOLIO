@@ -525,6 +525,11 @@ footer {
   line-height: var(--line-height);
 }
 
+.creative-tools .advertising-label,
+.audience-insights .advertising-label {
+  color: #963b0b;
+}
+
 /* Controles y lienzo en columnas: el diseño final se procesa dentro del navegador. */
 .creative-layout {
   display: grid;
@@ -594,6 +599,29 @@ footer {
 
 .creative-download:hover {
   background: #3543bd;
+}
+
+.insights-clear {
+  min-height: 2.75rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--primary-color);
+  font: inherit;
+  font-weight: var(--bold-font);
+  cursor: pointer;
+}
+
+.insights-clear:hover,
+.insights-clear:focus-visible {
+  background: #f3f3ff;
+}
+
+.insights-clear:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
 }
 
 .creative-preview {
