@@ -452,3 +452,167 @@ footer {
     /* Add a subtle shadow to create a glow effect */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
+
+/* Sección de campaña: separa la estrategia publicitaria del resto del portafolio. */
+.advertising {
+  max-width: 68.75rem;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+/* Encabezado de campaña: presenta el objetivo y el contexto de la propuesta. */
+.advertising-heading {
+  max-width: 46rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.advertising-heading h2 {
+  margin: 0.4rem 0 0.75rem;
+  color: var(--primary-color);
+}
+
+.advertising-heading > p:last-child,
+.advertising-card p,
+.advertising-offer > div > p:last-child {
+  line-height: var(--line-height);
+}
+
+/* Etiquetas pequeñas identifican el tema de cada bloque y ayudan a escanearlo. */
+.advertising-eyebrow,
+.advertising-label {
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+  font-weight: var(--bold-font);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Oferta principal: destaca el beneficio y la acción de contacto. */
+.advertising-offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 11px;
+}
+
+.advertising-offer h3 {
+  margin: 0.35rem 0;
+}
+
+.advertising-offer .advertising-label {
+  color: #ffe0cf;
+}
+
+.advertising-cta {
+  flex: 0 0 auto;
+  padding: 0.75rem 1rem;
+  color: var(--primary-color);
+  background: #fff;
+  border-radius: 5px;
+  font-weight: var(--bold-font);
+  text-align: center;
+}
+
+.advertising-cta:hover {
+  color: var(--primary-color);
+  background: #f3f3ff;
+}
+
+/* Tarjetas estratégicas: explican audiencia, oferta y canales recomendados. */
+.advertising-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.advertising-card {
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+}
+
+.advertising-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.advertising-card p + p {
+  margin-top: 0.6rem;
+}
+
+/* Embudo: ordena las acciones desde el primer anuncio hasta el seguimiento. */
+.advertising-funnel,
+.advertising-measurement {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: #f5f6ff;
+  border-radius: 11px;
+}
+
+.advertising-funnel h3,
+.advertising-measurement h3 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.advertising-funnel ol,
+.advertising-measurement ul {
+  padding-left: 1.3rem;
+  line-height: var(--line-height);
+}
+
+.advertising-funnel li + li,
+.advertising-measurement li + li {
+  margin-top: 0.35rem;
+}
+
+/* Medición: vincula los indicadores sugeridos con los resultados del negocio. */
+.advertising-measurement {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: start;
+  gap: 1rem;
+}
+
+/* Aviso de horario: deja claro que la pauta debe detenerse en la plataforma externa. */
+.advertising-schedule {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 4px solid var(--secondary-color);
+  background: #fff8f4;
+  line-height: var(--line-height);
+}
+
+/* En pantallas medianas, las tarjetas pasan a dos columnas para conservar legibilidad. */
+@media screen and (max-width: 720px) {
+  .advertising {
+    padding: 1.5rem 1rem;
+  }
+
+  .advertising-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .advertising-measurement {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* En móviles, cada bloque ocupa una columna y la llamada a la acción queda cómoda al tacto. */
+@media screen and (max-width: 420px) {
+  .advertising-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advertising-offer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
