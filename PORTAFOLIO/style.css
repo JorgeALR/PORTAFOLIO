@@ -872,6 +872,100 @@ footer {
   margin-top: 0.6rem;
 }
 
+/* Referentes: presenta aprendizajes de mercado sin reutilizar identidad visual ajena. */
+.advertising-benchmarks {
+  margin-top: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  color: #f8f7f2;
+  background: #202136;
+  border-radius: 14px;
+}
+
+.advertising-benchmarks-heading {
+  max-width: 48rem;
+  margin-bottom: 1.25rem;
+}
+
+.advertising-benchmarks-heading .advertising-label {
+  color: #ffd2b8;
+}
+
+.advertising-benchmarks-heading h3 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.advertising-benchmarks-heading > p:last-child,
+.benchmark-card p {
+  line-height: var(--line-height);
+}
+
+.benchmark-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.benchmark-card {
+  position: relative;
+  padding: 1.25rem;
+  color: #202136;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.benchmark-number {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  color: #a8441d;
+  font-size: 0.8rem;
+  font-weight: var(--bolder-font);
+  letter-spacing: 0.08em;
+}
+
+.benchmark-card h4 {
+  margin-bottom: 0.5rem;
+  color: #25264b;
+  font-size: 1.1rem;
+}
+
+.benchmark-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.benchmark-links a {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  color: #30388e;
+  background: #f0f1ff;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: var(--bold-font);
+}
+
+.benchmark-links a:hover,
+.benchmark-links a:focus-visible {
+  color: #fff;
+  background: #30388e;
+}
+
+.benchmark-links a:focus-visible {
+  outline: 3px solid #a8441d;
+  outline-offset: 2px;
+}
+
+.benchmark-takeaway {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #202136;
+  background: #ffe2cf;
+  border-radius: 8px;
+  line-height: var(--line-height);
+}
+
 /* Embudo: ordena las acciones desde el primer anuncio hasta el seguimiento. */
 .advertising-funnel,
 .advertising-measurement {
@@ -931,6 +1025,10 @@ footer {
 
   /* En pantallas pequeñas, la agenda se apila para mantener el texto legible. */
   .advertising-calendar {
+    grid-template-columns: 1fr;
+  }
+
+  .benchmark-grid {
     grid-template-columns: 1fr;
   }
 
