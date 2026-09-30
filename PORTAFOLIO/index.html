@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -33,13 +33,15 @@
     <!-- Navbar -->
     <nav>
       <h1>Jorge Adan Leon Romero</h1>
-      <ul class="navigation">
+      <ul class="navigation" id="main-navigation">
         <li><a href="#about" class="nav-link">Sobre mi</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li><a href="#advertising" class="nav-link">Publicidad</a></li>
+        <li><a href="#creative-tools" class="nav-link">Herramientas</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
-      <button class="burger-menu" id="burger-menu">
+      <button class="burger-menu" id="burger-menu" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="main-navigation">
         <ion-icon class="bars" name="menu-outline"></ion-icon>
         <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
       </button>
@@ -155,19 +157,428 @@
       </div>
     </section>
 
+    <!-- Modelo de campaña para mostrar una propuesta publicitaria para una imprenta. -->
+    <section class="advertising" id="advertising">
+      <div class="advertising-heading">
+        <p class="advertising-eyebrow">Modelo de campaña · Imprenta local</p>
+        <h2>Que tus ideas se vean en todas partes.</h2>
+        <p>
+          Una propuesta sencilla para atraer negocios que necesitan materiales
+          impresos, convertir consultas en cotizaciones y medir qué anuncios
+          generan pedidos.
+        </p>
+      </div>
+
+      <!-- La promesa y la llamada a la acción resumen la oferta para el público. -->
+      <div class="advertising-offer">
+        <div>
+          <p class="advertising-label">Propuesta de valor</p>
+          <h3>Impresión profesional, atención cercana y cotización clara.</h3>
+          <p>
+            Tarjetas, volantes, menús, etiquetas y material promocional
+            personalizados para que cada negocio pueda presentar mejor su marca.
+          </p>
+        </div>
+        <a class="advertising-cta" href="#contact">Solicitar una cotización</a>
+      </div>
+
+      <!-- Estas tarjetas describen el público objetivo y el enfoque del mensaje. -->
+      <div class="advertising-grid">
+        <article class="advertising-card">
+          <h3>01 · A quién queremos llegar</h3>
+          <p>
+            Emprendimientos, restaurantes, comercios y profesionales de la zona
+            que están abriendo, renovando su imagen o preparando una promoción.
+          </p>
+          <p><strong>Necesidad:</strong> resolver diseño, impresión y cantidades sin complicaciones.</p>
+        </article>
+
+        <article class="advertising-card">
+          <h3>02 · Qué ofrecemos</h3>
+          <p>
+            Una cotización personalizada según producto, tamaño, acabado y
+            cantidad. Mostrar ejemplos reales de trabajos y explicar tiempos de
+            entrega y opciones antes de confirmar el pedido.
+          </p>
+          <p><strong>Mensaje:</strong> “Cuéntanos qué necesitas y te ayudamos a imprimirlo”.</p>
+        </article>
+
+        <article class="advertising-card">
+          <h3>03 · Dónde anunciar</h3>
+          <p>
+            Publicaciones visuales en redes sociales para mostrar productos;
+            anuncios locales segmentados por ubicación e intereses comerciales;
+            y WhatsApp Business para atender consultas con autorización.
+          </p>
+          <p><strong>Creatividad:</strong> comparar el diseño en pantalla con el material impreso terminado.</p>
+        </article>
+      </div>
+
+      <!-- Referentes proporcionados por el usuario: se traducen en aprendizajes, no se copian marcas ni diseños. -->
+      <div class="advertising-benchmarks" aria-labelledby="benchmarks-title">
+        <div class="advertising-benchmarks-heading">
+          <p class="advertising-label">Referentes globales · aprendizajes adaptables</p>
+          <h3 id="benchmarks-title">Toma lo mejor del modelo. Construye una imprenta propia.</h3>
+          <p>
+            Una experiencia de impresión competitiva hace fácil descubrir productos,
+            entender opciones y pedir. Estas referencias sirven para estudiar ese
+            recorrido; no implican afiliación ni garantizan resultados.
+          </p>
+        </div>
+
+        <div class="benchmark-grid">
+          <article class="benchmark-card">
+            <span class="benchmark-number">01</span>
+            <h4>Un catálogo que se entiende</h4>
+            <p>
+              Organiza tarjetas, volantes y gran formato por necesidad. Antes de
+              cotizar, guía al cliente por tamaño, material, cantidad y acabado;
+              publica precios solo si están actualizados y aplican a esa opción.
+            </p>
+            <p class="benchmark-links">
+              <a href="https://www.vistaprint.com/" target="_blank" rel="noopener noreferrer">Vistaprint</a>
+              <a href="https://www.gotprint.com/" target="_blank" rel="noopener noreferrer">GotPrint</a>
+              <a href="https://www.uprinting.com/" target="_blank" rel="noopener noreferrer">UPrinting</a>
+            </p>
+          </article>
+
+          <article class="benchmark-card">
+            <span class="benchmark-number">02</span>
+            <h4>El valor premium se demuestra</h4>
+            <p>
+              Para acabados especiales, muestra primeros planos del papel y del
+              resultado real, explica qué cambia y ofrece una muestra cuando sea
+              posible. No basta con llamar “premium” al producto.
+            </p>
+            <p class="benchmark-links">
+              <a href="https://www.moo.com/" target="_blank" rel="noopener noreferrer">MOO</a>
+            </p>
+          </article>
+
+          <article class="benchmark-card">
+            <span class="benchmark-number">03</span>
+            <h4>Una especialidad vuelve memorable la oferta</h4>
+            <p>
+              Destaca una categoría reconocible —como stickers o empaque— con
+              ejemplos, usos y especificaciones claras. Hazlo solo para productos
+              que la imprenta puede producir de forma consistente.
+            </p>
+            <p class="benchmark-links">
+              <a href="https://www.stickermule.com/" target="_blank" rel="noopener noreferrer">Sticker Mule</a>
+            </p>
+          </article>
+
+          <article class="benchmark-card">
+            <span class="benchmark-number">04</span>
+            <h4>Amplía el catálogo con aliados confiables</h4>
+            <p>
+              La producción bajo demanda puede sumar productos sin fabricar todo
+              internamente, pero solo mediante un proveedor probado, márgenes
+              calculados y plazos que puedas cumplir.
+            </p>
+            <p class="benchmark-links">
+              <a href="https://www.printful.com/" target="_blank" rel="noopener noreferrer">Printful</a>
+              <a href="https://printify.com/" target="_blank" rel="noopener noreferrer">Printify</a>
+            </p>
+          </article>
+        </div>
+
+        <!-- La síntesis convierte los referentes en una propuesta local viable y diferenciada. -->
+        <p class="benchmark-takeaway">
+          <strong>La versión para una imprenta local:</strong> catálogo breve y claro,
+          muestras reales, opciones explicadas sin letra pequeña y una cotización
+          atendida por una persona. Empieza con lo que ya puedes producir bien;
+          amplía el catálogo tras validar demanda y capacidad.
+        </p>
+      </div>
+
+      <!-- El ejemplo da una pieza base lista para adaptar sin inventar precios ni resultados. -->
+      <div class="advertising-copy">
+        <div>
+          <p class="advertising-label">Ejemplo de anuncio</p>
+          <h3>Haz que tu negocio se vea tan bien como trabaja.</h3>
+        </div>
+        <blockquote>
+          ¿Necesitas tarjetas, menús, etiquetas o volantes para tu negocio en
+          <strong>[tu zona]</strong>? Cuéntanos qué producto, cantidad y fecha
+          necesitas. Te orientamos y preparamos una cotización personalizada.
+        </blockquote>
+        <p>
+          <strong>Llamada a la acción:</strong> solicita tu cotización. Completa
+          la zona, los productos disponibles y el plazo real antes de publicar.
+        </p>
+      </div>
+
+      <!-- El flujo convierte el primer contacto en una oportunidad de venta medible. -->
+      <div class="advertising-funnel">
+        <h3>Recorrido de la campaña</h3>
+        <ol>
+          <li><strong>Atraer:</strong> publicar una pieza con un producto destacado y un beneficio concreto.</li>
+          <li><strong>Interesar:</strong> mostrar muestras, acabados, usos y respuestas a preguntas frecuentes.</li>
+          <li><strong>Convertir:</strong> invitar a pedir cotización por el formulario o canal comercial elegido.</li>
+          <li><strong>Dar seguimiento:</strong> responder, confirmar especificaciones y registrar el resultado de cada consulta.</li>
+        </ol>
+      </div>
+
+      <!-- Los indicadores permiten evaluar resultados sin inventar cifras de rendimiento. -->
+      <div class="advertising-measurement">
+        <div>
+          <p class="advertising-label">Cómo medir</p>
+          <h3>Optimizar por pedidos, no solo por “me gusta”.</h3>
+        </div>
+        <ul>
+          <li>Consultas y cotizaciones recibidas por canal.</li>
+          <li>Porcentaje de cotizaciones que se convierten en pedidos.</li>
+          <li>Costo por consulta y costo por cliente, si se invierte en anuncios.</li>
+          <li>Productos más solicitados y motivos de pérdida de oportunidades.</li>
+        </ul>
+      </div>
+
+      <!-- La prueba compara una variable a la vez y evita optimizar solo por interacciones superficiales. -->
+      <div class="advertising-test">
+        <h3>Prueba y mejora en ciclos cortos</h3>
+        <ol>
+          <li>Publica dos versiones de una misma pieza; cambia solo el titular o la imagen, no ambos.</li>
+          <li>Conserva la misma audiencia, periodo y llamada a la acción para que la comparación sea útil.</li>
+          <li>Registra consultas pertinentes, cotizaciones y pedidos atribuibles a cada versión.</li>
+          <li>Repite la opción que genera mejores oportunidades; si el volumen es bajo, reúne más datos antes de decidir.</li>
+        </ol>
+        <p>
+          En un registro sencillo anota fecha, canal, versión del anuncio,
+          producto consultado y resultado. Guarda solo los datos necesarios para
+          responder y dar seguimiento con permiso.
+        </p>
+      </div>
+
+      <!-- La agenda convierte la estrategia en contenido planificable para distintos momentos de compra. -->
+      <div class="advertising-calendar">
+        <div>
+          <p class="advertising-label">Activación de campaña</p>
+          <h3>Una secuencia de cuatro semanas para aprender y vender.</h3>
+          <p>
+            Ajusta el ritmo a la capacidad del equipo. Cada publicación debe
+            dirigir a una acción concreta y a un canal que alguien pueda atender.
+          </p>
+        </div>
+        <ol>
+          <li><strong>Semana 1 · Descubrimiento:</strong> presenta productos y usos para negocios locales; pregunta qué material necesitan.</li>
+          <li><strong>Semana 2 · Consideración:</strong> explica tamaños, papeles y acabados con muestras reales y consejos prácticos.</li>
+          <li><strong>Semana 3 · Confianza:</strong> enseña un trabajo terminado con autorización del cliente y comparte cómo fue el proceso.</li>
+          <li><strong>Semana 4 · Acción:</strong> destaca una categoría prioritaria, aclara cómo cotizar y recuerda fechas límite verificadas.</li>
+        </ol>
+      </div>
+
+      <!-- La lista de control evita publicar promesas sobre capacidad, precio o entrega sin confirmarlas. -->
+      <div class="advertising-checklist">
+        <h3>Antes de publicar, confirma</h3>
+        <ul>
+          <li>Zona atendida, productos disponibles, cantidades mínimas y especificaciones.</li>
+          <li>Precios o condiciones vigentes, tiempos reales de producción y método de entrega.</li>
+          <li>Quién responde las consultas y en qué horario; si no se ofrecen ciertos servicios, indícalo.</li>
+          <li>Permiso para usar imágenes, marcas y testimonios de clientes.</li>
+          <li>Que el anuncio, el enlace de contacto y el formulario describan la misma oferta.</li>
+        </ul>
+      </div>
+
+      <!-- Herramienta local: compone una creatividad descargable sin enviar los textos a un servidor. -->
+      <section class="creative-tools" id="creative-tools" aria-labelledby="creative-tools-title">
+        <div class="creative-tools-heading">
+          <p class="advertising-label">Herramientas gratuitas</p>
+          <h3 id="creative-tools-title">Crea una publicación para tus redes</h3>
+          <p>Escribe una oferta clara, elige formato y colores, y descarga el diseño como PNG.</p>
+        </div>
+        <div class="creative-layout">
+          <form class="creative-form" id="creative-form">
+            <label for="creative-format">Formato</label>
+            <select id="creative-format" name="format">
+              <option value="square">Cuadrado · 1080 × 1080</option>
+              <option value="landscape">Horizontal · 1200 × 630</option>
+              <option value="story">Historia · 1080 × 1920</option>
+            </select>
+
+            <label for="creative-business">Nombre del negocio</label>
+            <input id="creative-business" name="business" maxlength="45" value="Tu imprenta" />
+
+            <label for="creative-title">Titular</label>
+            <input id="creative-title" name="title" maxlength="55" value="Tu marca merece destacar" required />
+
+            <label for="creative-copy">Texto de apoyo</label>
+            <textarea id="creative-copy" name="copy" maxlength="110" rows="3">Impresos a tu medida para hacer crecer tu negocio.</textarea>
+
+            <label for="creative-cta">Llamada a la acción</label>
+            <input id="creative-cta" name="cta" maxlength="32" value="Pide tu cotización" required />
+
+            <label for="creative-palette">Estilo de color</label>
+            <select id="creative-palette" name="palette">
+              <option value="violet">Violeta moderno</option>
+              <option value="sunset">Atardecer cálido</option>
+              <option value="forest">Verde profesional</option>
+            </select>
+
+            <button class="creative-download" id="creative-download" type="button">Descargar publicación PNG</button>
+            <p class="creative-status" id="creative-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="creative-preview">
+            <canvas id="creative-canvas" width="1080" height="1080" role="img" aria-label="Vista previa del diseño para redes sociales"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparador manual con métricas agregadas: no usa píxeles ni identifica a personas. -->
+      <section class="audience-insights" id="audience-insights" aria-labelledby="audience-insights-title">
+        <div class="creative-tools-heading">
+          <p class="advertising-label">Optimización responsable</p>
+          <h3 id="audience-insights-title">Compara qué públicos generan consultas y pedidos</h3>
+          <p>
+            Copia cifras agregadas desde Meta Ads Manager. Esta página no se conecta
+            a Facebook, no rastrea visitantes y no recibe ni guarda los datos en un servidor.
+          </p>
+        </div>
+        <form class="insights-form" id="insights-form">
+          <div class="insights-field">
+            <label for="insights-date">Fecha del reporte</label>
+            <input id="insights-date" name="date" type="date" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-audience">Público de la campaña</label>
+            <select id="insights-audience" name="audience">
+              <option value="Negocios locales">Negocios locales</option>
+              <option value="Restaurantes y cafeterías">Restaurantes y cafeterías</option>
+              <option value="Tiendas y comercios">Tiendas y comercios</option>
+              <option value="Profesionales y servicios">Profesionales y servicios</option>
+              <option value="Emprendimientos nuevos">Emprendimientos nuevos</option>
+            </select>
+          </div>
+          <div class="insights-field">
+            <label for="insights-reach">Personas alcanzadas</label>
+            <input id="insights-reach" name="reach" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-impressions">Impresiones</label>
+            <input id="insights-impressions" name="impressions" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-clicks">Clics en el enlace</label>
+            <input id="insights-clicks" name="clicks" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-leads">Consultas calificadas</label>
+            <input id="insights-leads" name="leads" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-orders">Pedidos confirmados</label>
+            <input id="insights-orders" name="orders" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-spend">Gasto registrado (moneda de la plataforma, opcional)</label>
+            <input id="insights-spend" name="spend" type="number" min="0" step="0.01" />
+          </div>
+          <button class="creative-download insights-submit" type="submit">Añadir resultados agregados</button>
+        </form>
+        <button class="insights-clear" id="insights-clear" type="button">Borrar los resultados de esta sesión</button>
+        <p class="insights-privacy">
+          Registra únicamente grupos y cifras globales. No ingreses nombres, correos,
+          teléfonos, edades individuales, categorías sensibles ni datos de clientes.
+          Los resultados se borran al recargar o cerrar esta pestaña.
+        </p>
+        <p class="insights-status" id="insights-status" role="status" aria-live="polite"></p>
+        <div class="insights-results" id="insights-results" aria-live="polite"></div>
+        <p class="insights-footnote">
+          Compara varios periodos antes de decidir: pocas impresiones o pedidos no
+          prueban por sí solos qué audiencia funcionará mejor. Respeta las políticas
+          de anuncios y privacidad de la plataforma.
+        </p>
+      </section>
+
+      <!-- El plan prioriza validar demanda y capacidad antes de comprometer dinero en anuncios. -->
+      <div class="advertising-launch">
+        <div>
+          <p class="advertising-label">Plan de arranque · primeros 7 días</p>
+          <h3>Primero valida. Después escala lo que sí deja margen.</h3>
+          <p>
+            No hay una campaña que garantice ventas. Reduce el riesgo empezando
+            con conversaciones y canales gratuitos, y decide con tus propios
+            costos, capacidad y pedidos reales.
+          </p>
+        </div>
+        <ol>
+          <li><strong>Día 1:</strong> elige un producto que puedas fabricar bien; calcula costo variable, margen de contribución y capacidad semanal.</li>
+          <li><strong>Día 2:</strong> prepara tres fotos auténticas, especificaciones verificadas y una forma simple de pedir cotización.</li>
+          <li><strong>Días 3–4:</strong> comparte una publicación útil y contacta de forma personal a negocios relevantes; no envíes mensajes masivos ni repetidos.</li>
+          <li><strong>Días 5–6:</strong> responde rápido cuando sea posible, aclara requisitos y da seguimiento una sola vez si la persona lo acepta.</li>
+          <li><strong>Día 7:</strong> revisa consultas calificadas, cotizaciones y pedidos; pregunta por qué no avanzaron y ajusta un elemento antes de probar de nuevo.</li>
+        </ol>
+      </div>
+
+      <!-- Los ejemplos deben personalizarse y enviarse solo en contextos donde el contacto sea apropiado. -->
+      <div class="advertising-scripts">
+        <h3>Mensajes listos para adaptar</h3>
+        <article>
+          <p class="advertising-label">Publicación para comercios</p>
+          <blockquote>
+            ¿Vas a abrir o renovar tu negocio? Imprimimos
+            <strong>[producto disponible]</strong> con las opciones de
+            <strong>[acabado real]</strong>. Envíanos cantidad y medidas para
+            revisar disponibilidad y prepararte una cotización, sin compromiso.
+          </blockquote>
+        </article>
+        <article>
+          <p class="advertising-label">Respuesta a una consulta</p>
+          <blockquote>
+            ¡Gracias por escribir! Para cotizar con precisión, ¿qué producto y
+            cantidad necesitas, qué medidas o acabado prefieres y para cuándo?
+            Te confirmo opciones y plazo antes de que decidas.
+          </blockquote>
+        </article>
+        <p class="advertising-script-note">
+          Reemplaza los campos entre corchetes por servicios reales. No afirmes
+          “entrega inmediata”, “mejor precio” ni descuentos si no puedes
+          comprobarlos y cumplirlos.
+        </p>
+      </div>
+
+      <!-- El límite de adquisición se calcula con los números del negocio, no con una cifra genérica. -->
+      <div class="advertising-budget">
+        <div>
+          <p class="advertising-label">Control de inversión</p>
+          <h3>Define tu límite antes de activar pauta pagada.</h3>
+        </div>
+        <ul>
+          <li>Calcula el margen de contribución por pedido después de materiales, producción, comisiones y entrega variable.</li>
+          <li>Resta el beneficio mínimo que necesitas conservar: eso determina cuánto puedes destinar como máximo a captar ese pedido.</li>
+          <li>Empieza solo con un monto que puedas permitirte perder; pausa si el costo por pedido supera tu límite o la imprenta no puede atender más.</li>
+          <li>Si aún no conoces esos números, no pagues anuncios todavía: valida primero con publicaciones y contactos directos pertinentes.</li>
+        </ul>
+      </div>
+
+      <!-- El horario es una instrucción para configurar en la plataforma publicitaria, no un temporizador web. -->
+      <p class="advertising-schedule">
+        <strong>Horario:</strong> el límite solicitado originalmente (17:45 del
+        30 de septiembre de 2026) ya venció. Esta página no inició ninguna pauta
+        ni puede pausarla. Antes de una nueva campaña, define una fecha final y
+        confirma la zona horaria directamente en la plataforma publicitaria.
+      </p>
+    </section>
+
     <!-- Contact section -->
     <section class="contact" id="contact">
       <h2>Contacto</h2>
       <div class="contact-form-container">
         <div class="contact-form">
           <form action="https://formspree.io/f/xyylnggw" method="POST">
+            <!-- Una solicitud clara facilita cotizar sin pedir datos personales innecesarios. -->
+            <p class="quote-guidance">
+              Para orientarte mejor, indica en el mensaje qué producto buscas,
+              cantidad aproximada, medidas o acabado y fecha deseada. La
+              disponibilidad y el plazo se confirman al responder.
+            </p>
             <div class="form-control">
               <label for="name">Nombre</label>
               <input
                 type="text"
                 id="name"
                 name="sender-name"
-                placeholder="Enter Your Name"
+                placeholder="Tu nombre"
                 class="input-field"
                 required
               />
@@ -178,7 +589,7 @@
                 type="email"
                 id="email"
                 name="sender-email"
-                placeholder="Enter Your Email"
+                placeholder="tu@correo.com"
                 class="input-field"
                 required
               />
@@ -189,7 +600,7 @@
                 id="message"
                 cols="60"
                 rows="10"
-                placeholder="Enter Your Message"
+                placeholder="Producto, cantidad, medidas o acabado y fecha deseada"
                 name="message"
                 class="input-field"
                 required
@@ -197,7 +608,7 @@
             </div>
             <input
               type="submit"
-              value="Submit"
+              value="Solicitar cotización"
               id="submit-btn"
               class="submit-btn"
             />
