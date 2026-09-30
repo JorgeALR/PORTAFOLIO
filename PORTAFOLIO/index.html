@@ -38,6 +38,7 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Proyectos</a></li>
         <li><a href="#advertising" class="nav-link">Publicidad</a></li>
+        <li><a href="#creative-tools" class="nav-link">Herramientas</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
       <button class="burger-menu" id="burger-menu">
@@ -300,6 +301,107 @@
           <li>Que el anuncio, el enlace de contacto y el formulario describan la misma oferta.</li>
         </ul>
       </div>
+
+      <!-- Herramienta local: compone una creatividad descargable sin enviar los textos a un servidor. -->
+      <section class="creative-tools" id="creative-tools" aria-labelledby="creative-tools-title">
+        <div class="creative-tools-heading">
+          <p class="advertising-label">Herramientas gratuitas</p>
+          <h3 id="creative-tools-title">Crea una publicación para tus redes</h3>
+          <p>Escribe una oferta clara, elige formato y colores, y descarga el diseño como PNG.</p>
+        </div>
+        <div class="creative-layout">
+          <form class="creative-form" id="creative-form">
+            <label for="creative-format">Formato</label>
+            <select id="creative-format" name="format">
+              <option value="square">Cuadrado · 1080 × 1080</option>
+              <option value="landscape">Horizontal · 1200 × 630</option>
+              <option value="story">Historia · 1080 × 1920</option>
+            </select>
+
+            <label for="creative-business">Nombre del negocio</label>
+            <input id="creative-business" name="business" maxlength="45" value="Tu imprenta" />
+
+            <label for="creative-title">Titular</label>
+            <input id="creative-title" name="title" maxlength="55" value="Tu marca merece destacar" required />
+
+            <label for="creative-copy">Texto de apoyo</label>
+            <textarea id="creative-copy" name="copy" maxlength="110" rows="3">Impresos a tu medida para hacer crecer tu negocio.</textarea>
+
+            <label for="creative-cta">Llamada a la acción</label>
+            <input id="creative-cta" name="cta" maxlength="32" value="Pide tu cotización" required />
+
+            <label for="creative-palette">Estilo de color</label>
+            <select id="creative-palette" name="palette">
+              <option value="violet">Violeta moderno</option>
+              <option value="sunset">Atardecer cálido</option>
+              <option value="forest">Verde profesional</option>
+            </select>
+
+            <button class="creative-download" id="creative-download" type="button">Descargar publicación PNG</button>
+            <p class="creative-status" id="creative-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="creative-preview">
+            <canvas id="creative-canvas" width="1080" height="1080" role="img" aria-label="Vista previa del diseño para redes sociales"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparador manual con métricas agregadas: no usa píxeles ni identifica a personas. -->
+      <section class="audience-insights" id="audience-insights" aria-labelledby="audience-insights-title">
+        <div class="creative-tools-heading">
+          <p class="advertising-label">Optimización responsable</p>
+          <h3 id="audience-insights-title">Compara qué públicos generan consultas y pedidos</h3>
+          <p>
+            Copia cifras agregadas desde Meta Ads Manager. Esta página no se conecta
+            a Facebook, no rastrea visitantes y no recibe ni guarda los datos en un servidor.
+          </p>
+        </div>
+        <form class="insights-form" id="insights-form">
+          <div class="insights-field">
+            <label for="insights-audience">Público de la campaña</label>
+            <select id="insights-audience" name="audience">
+              <option value="Negocios locales">Negocios locales</option>
+              <option value="Restaurantes y cafeterías">Restaurantes y cafeterías</option>
+              <option value="Tiendas y comercios">Tiendas y comercios</option>
+              <option value="Profesionales y servicios">Profesionales y servicios</option>
+              <option value="Emprendimientos nuevos">Emprendimientos nuevos</option>
+            </select>
+          </div>
+          <div class="insights-field">
+            <label for="insights-reach">Personas alcanzadas</label>
+            <input id="insights-reach" name="reach" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-clicks">Clics en el enlace</label>
+            <input id="insights-clicks" name="clicks" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-leads">Consultas calificadas</label>
+            <input id="insights-leads" name="leads" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-orders">Pedidos confirmados</label>
+            <input id="insights-orders" name="orders" type="number" min="0" step="1" required />
+          </div>
+          <div class="insights-field">
+            <label for="insights-spend">Gasto de esta audiencia (opcional)</label>
+            <input id="insights-spend" name="spend" type="number" min="0" step="0.01" />
+          </div>
+          <button class="creative-download insights-submit" type="submit">Añadir resultados agregados</button>
+        </form>
+        <p class="insights-privacy">
+          Registra únicamente grupos y cifras globales. No ingreses nombres, correos,
+          teléfonos, edades individuales, categorías sensibles ni datos de clientes.
+          Los resultados se borran al recargar o cerrar esta pestaña.
+        </p>
+        <p class="insights-status" id="insights-status" role="status" aria-live="polite"></p>
+        <div class="insights-results" id="insights-results" aria-live="polite"></div>
+        <p class="insights-footnote">
+          Compara varios periodos antes de decidir: pocas impresiones o pedidos no
+          prueban por sí solos qué audiencia funcionará mejor. Respeta las políticas
+          de anuncios y privacidad de la plataforma.
+        </p>
+      </section>
 
       <!-- El plan prioriza validar demanda y capacidad antes de comprometer dinero en anuncios. -->
       <div class="advertising-launch">
