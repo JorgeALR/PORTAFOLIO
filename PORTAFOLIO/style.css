@@ -544,7 +544,9 @@ footer {
 }
 
 .advertising-copy,
-.advertising-test {
+.advertising-test,
+.advertising-calendar,
+.advertising-checklist {
   margin-top: 1rem;
   padding: 1.25rem;
   border: 1px solid #e1e3f3;
@@ -553,14 +555,19 @@ footer {
 }
 
 .advertising-copy h3,
-.advertising-test h3 {
+.advertising-test h3,
+.advertising-calendar h3,
+.advertising-checklist h3 {
   margin-bottom: 0.75rem;
   color: var(--primary-color);
 }
 
 .advertising-copy blockquote,
 .advertising-test ol,
-.advertising-test p {
+.advertising-test p,
+.advertising-calendar p,
+.advertising-calendar ol,
+.advertising-checklist ul {
   line-height: var(--line-height);
 }
 
@@ -572,6 +579,28 @@ footer {
 
 .advertising-test ol {
   padding-left: 1.3rem;
+}
+
+/* Agenda: distribuye la introducción y las cuatro semanas en columnas legibles. */
+.advertising-calendar {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 1rem;
+}
+
+.advertising-calendar ol,
+.advertising-checklist ul {
+  padding-left: 1.3rem;
+}
+
+.advertising-calendar li + li,
+.advertising-checklist li + li {
+  margin-top: 0.35rem;
+}
+
+/* Lista de control: destaca las verificaciones necesarias antes de lanzar anuncios. */
+.advertising-checklist {
+  background: #f5f6ff;
 }
 
 .advertising-test li + li {
@@ -647,6 +676,11 @@ footer {
   .advertising-measurement {
     grid-template-columns: 1fr;
   }
+
+  /* En pantallas pequeñas, la agenda se apila para mantener el texto legible. */
+  .advertising-calendar {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* En móviles, cada bloque ocupa una columna y la llamada a la acción queda cómoda al tacto. */
@@ -659,4 +693,10 @@ footer {
     align-items: stretch;
     flex-direction: column;
   }
+}
+
+/* Orientación del formulario: ayuda a enviar la información útil para cotizar. */
+.quote-guidance {
+  margin-bottom: 0.75rem;
+  line-height: var(--line-height);
 }

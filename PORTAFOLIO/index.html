@@ -271,6 +271,36 @@
         </p>
       </div>
 
+      <!-- La agenda convierte la estrategia en contenido planificable para distintos momentos de compra. -->
+      <div class="advertising-calendar">
+        <div>
+          <p class="advertising-label">Activación de campaña</p>
+          <h3>Una secuencia de cuatro semanas para aprender y vender.</h3>
+          <p>
+            Ajusta el ritmo a la capacidad del equipo. Cada publicación debe
+            dirigir a una acción concreta y a un canal que alguien pueda atender.
+          </p>
+        </div>
+        <ol>
+          <li><strong>Semana 1 · Descubrimiento:</strong> presenta productos y usos para negocios locales; pregunta qué material necesitan.</li>
+          <li><strong>Semana 2 · Consideración:</strong> explica tamaños, papeles y acabados con muestras reales y consejos prácticos.</li>
+          <li><strong>Semana 3 · Confianza:</strong> enseña un trabajo terminado con autorización del cliente y comparte cómo fue el proceso.</li>
+          <li><strong>Semana 4 · Acción:</strong> destaca una categoría prioritaria, aclara cómo cotizar y recuerda fechas límite verificadas.</li>
+        </ol>
+      </div>
+
+      <!-- La lista de control evita publicar promesas sobre capacidad, precio o entrega sin confirmarlas. -->
+      <div class="advertising-checklist">
+        <h3>Antes de publicar, confirma</h3>
+        <ul>
+          <li>Zona atendida, productos disponibles, cantidades mínimas y especificaciones.</li>
+          <li>Precios o condiciones vigentes, tiempos reales de producción y método de entrega.</li>
+          <li>Quién responde las consultas y en qué horario; si no se ofrecen ciertos servicios, indícalo.</li>
+          <li>Permiso para usar imágenes, marcas y testimonios de clientes.</li>
+          <li>Que el anuncio, el enlace de contacto y el formulario describan la misma oferta.</li>
+        </ul>
+      </div>
+
       <!-- El horario es una instrucción para configurar en la plataforma publicitaria, no un temporizador web. -->
       <p class="advertising-schedule">
         <strong>Límite de pauta solicitado:</strong> detener los anuncios a las
@@ -286,13 +316,19 @@
       <div class="contact-form-container">
         <div class="contact-form">
           <form action="https://formspree.io/f/xyylnggw" method="POST">
+            <!-- Una solicitud clara facilita cotizar sin pedir datos personales innecesarios. -->
+            <p class="quote-guidance">
+              Para orientarte mejor, indica en el mensaje qué producto buscas,
+              cantidad aproximada, medidas o acabado y fecha deseada. La
+              disponibilidad y el plazo se confirman al responder.
+            </p>
             <div class="form-control">
               <label for="name">Nombre</label>
               <input
                 type="text"
                 id="name"
                 name="sender-name"
-                placeholder="Enter Your Name"
+                placeholder="Tu nombre"
                 class="input-field"
                 required
               />
@@ -303,7 +339,7 @@
                 type="email"
                 id="email"
                 name="sender-email"
-                placeholder="Enter Your Email"
+                placeholder="tu@correo.com"
                 class="input-field"
                 required
               />
@@ -314,7 +350,7 @@
                 id="message"
                 cols="60"
                 rows="10"
-                placeholder="Enter Your Message"
+                placeholder="Producto, cantidad, medidas o acabado y fecha deseada"
                 name="message"
                 class="input-field"
                 required
@@ -322,7 +358,7 @@
             </div>
             <input
               type="submit"
-              value="Submit"
+              value="Solicitar cotización"
               id="submit-btn"
               class="submit-btn"
             />
