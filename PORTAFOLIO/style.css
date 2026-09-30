@@ -523,6 +523,11 @@ footer {
   background: #f3f3ff;
 }
 
+.advertising-cta:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
 /* Tarjetas estratégicas: explican audiencia, oferta y canales recomendados. */
 .advertising-grid {
   display: grid;
@@ -536,6 +541,45 @@ footer {
   background: #fff;
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
+}
+
+.advertising-copy,
+.advertising-test {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #e1e3f3;
+  border-radius: 11px;
+  background: #fff;
+}
+
+.advertising-copy h3,
+.advertising-test h3 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.advertising-copy blockquote,
+.advertising-test ol,
+.advertising-test p {
+  line-height: var(--line-height);
+}
+
+.advertising-copy blockquote {
+  margin: 0.75rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--secondary-color);
+}
+
+.advertising-test ol {
+  padding-left: 1.3rem;
+}
+
+.advertising-test li + li {
+  margin-top: 0.35rem;
+}
+
+.advertising-test p {
+  margin-top: 0.75rem;
 }
 
 .advertising-card h3 {
